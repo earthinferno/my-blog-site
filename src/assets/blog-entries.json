@@ -1,0 +1,20 @@
+[
+  {
+    "title": "blog1",
+    "category": "JavaScript",
+    "content": [
+      {
+        "text": "This is my first blog entry"
+      }
+    ]
+  },
+  {
+    "title": "blog2",
+    "category": "JavaScript",
+    "content": [
+      {
+        "text": "This is my second blog entry"
+      }
+    ]
+  }
+]
