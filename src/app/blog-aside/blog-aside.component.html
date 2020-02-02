@@ -1,3 +1,7 @@
-<p>blog-aside works!</p>
+<p>Blog Entries</p>
+
+<ul class="blog-list">
+  <li  class="blog-list-item" *ngFor="let blog of blogs | async">{{ blog.title }}</li>
+</ul>
 
 
