@@ -1,6 +1,5 @@
 import { BlogItem } from './../models/blog-item';
 import { Component, OnInit, Input } from '@angular/core';
-import { BlogContent } from '../models/blog-content';
 
 @Component({
   selector: 'app-blog-item',

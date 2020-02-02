@@ -16,6 +16,13 @@ describe('BlogItemComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(BlogItemComponent);
     component = fixture.componentInstance;
+
+    component.blogItem = {
+      title: 'mockBlogItem',
+      category: 'mockCategory',
+      content: [{text: 'mockText'}]
+    };
+
     fixture.detectChanges();
   });
 
