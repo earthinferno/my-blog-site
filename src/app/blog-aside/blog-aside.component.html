@@ -1,7 +1,9 @@
 <p>Blog Entries</p>
 
 <ul class="blog-list">
-  <li  class="blog-list-item" *ngFor="let blog of blogs | async">{{ blog.title }}</li>
+  <li class="blog-list-item" *ngFor="let blog of blogs | async">
+    <a [routerLink]="['/blogs', blog.id]">
+      <p>{{ blog.title }}</p>
+    </a>
+  </li>
 </ul>
-
-

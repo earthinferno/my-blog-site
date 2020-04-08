@@ -1,4 +1,5 @@
 export class BlogItem {
+  id: string;
   title: string;
   category: string;
   content: Item[];

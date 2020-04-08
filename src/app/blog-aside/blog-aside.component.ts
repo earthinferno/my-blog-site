@@ -1,20 +1,20 @@
-import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 
+import { Observable } from 'rxjs';
 import { BlogService } from '../blog.service';
+import { BlogItem } from './../models/blog-item';
 
 @Component({
   selector: 'app-blog-aside',
   templateUrl: './blog-aside.component.html',
-  styleUrls: ['./blog-aside.component.sass']
+  styleUrls: ['./blog-aside.component.sass'],
 })
 export class BlogAsideComponent implements OnInit {
-  blogs: Observable<object>;
+  blogs: Observable<BlogItem[]>;
 
-  constructor(private blogService: BlogService) { }
+  constructor(private blogService: BlogService) {}
 
   ngOnInit() {
     this.blogs = this.blogService.getBlogEntries();
   }
-
 }
