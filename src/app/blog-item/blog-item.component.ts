@@ -7,7 +7,7 @@ import { BlogItem } from './../models/blog-item';
 @Component({
   selector: 'app-blog-item',
   templateUrl: './blog-item.component.html',
-  styleUrls: ['./blog-item.component.sass'],
+  styleUrls: ['./blog-item.component.scss'],
 })
 export class BlogItemComponent implements OnInit {
   blogItem: BlogItem;
@@ -21,7 +21,9 @@ export class BlogItemComponent implements OnInit {
     this.route.paramMap.subscribe((params) => {
       this.blogService
         .getFilteredBlogEntries(params.get('blogId'))
-        .subscribe((blog) => (this.blogItem = blog[0]));
+        .subscribe((blog) => {
+          this.blogItem = blog[0];
+        });
     });
   }
 }

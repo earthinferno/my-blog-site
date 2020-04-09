@@ -1,7 +1,18 @@
 <div id="blog-item" *ngIf="blogItem">
   <h2>{{ blogItem.title }}</h2>
-  <div>Category {{ blogItem.category }}</div>
+  <p *ngIf="blogItem.synopsis">
+    <strong>{{ blogItem.synopsis }}</strong>
+  </p>
+
   <div *ngFor="let item of blogItem.content">
-    <span>{{ item.text }} </span>
+    <!-- <span>{{ item.text }} </span> -->
+    <p
+      *ngIf="item.type == 'p'"
+      [innerHTML]="item.value | joinStrings | sanitizeHtml"
+    ></p>
+
+    <pre *ngIf="item.type == 'c'">
+      <code [innerText]="item.value | joinStrings"> </code>
+    </pre>
   </div>
 </div>
