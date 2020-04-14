@@ -3,8 +3,10 @@ export class BlogItem {
   title: string;
   category: string;
   content: Item[];
+  synopsis?: string;
 }
 
 class Item {
-  text: string;
+  type: 'p' | 'a' | 'c';
+  value: string | string[];
 }

@@ -11,15 +11,6 @@ import { BlogItem } from './models/blog-item';
 export class BlogService {
   constructor(private http: HttpClient) {}
 
-  getBlogEntry(id: string): BlogItem[] {
-    let blogEntries: BlogItem[] = [];
-    this.http
-      .get<BlogItem[]>('/assets/blog-entries.json')
-      .subscribe((entries) => (blogEntries = entries));
-
-    return blogEntries.filter((x) => x.id === id);
-  }
-
   getFilteredBlogEntries(id: string): Observable<BlogItem[]> {
     return this.http
       .get<BlogItem[]>('/assets/blog-entries.json')

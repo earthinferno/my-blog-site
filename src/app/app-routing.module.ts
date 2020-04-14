@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { BlogItemComponent } from './blog-item/blog-item.component';
+import { BlogEntryDecoratorComponent } from './blog-entry-decorator/blog-entry-decorator.component';
 import { BlogsMainComponent } from './blog-main/blogs-main.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', component: BlogsMainComponent },
+  { path: '', component: HomeComponent },
   { path: 'blogs', component: BlogsMainComponent },
-  { path: 'blogs/:blogId', component: BlogItemComponent },
+  { path: 'blogs/:blogId', component: BlogEntryDecoratorComponent },
 ];
 
 @NgModule({

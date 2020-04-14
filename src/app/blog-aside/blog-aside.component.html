@@ -1,9 +1,11 @@
-<p>Blog Entries</p>
+<div *ngIf="blogs">
+  <h2>Blog Entries</h2>
 
-<ul class="blog-list">
-  <li class="blog-list-item" *ngFor="let blog of blogs | async">
-    <a [routerLink]="['/blogs', blog.id]">
-      <p>{{ blog.title }}</p>
-    </a>
-  </li>
-</ul>
+  <ul class="blog-list">
+    <li class="blog-list-item" *ngFor="let blog of blogs | async">
+      <a [routerLink]="['/blogs', blog.id]">
+        <p>{{ blog.title }}</p>
+      </a>
+    </li>
+  </ul>
+</div>
