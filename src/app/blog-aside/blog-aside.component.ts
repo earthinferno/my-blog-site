@@ -7,7 +7,7 @@ import { BlogItem } from './../models/blog-item';
 @Component({
   selector: 'app-blog-aside',
   templateUrl: './blog-aside.component.html',
-  styleUrls: ['./blog-aside.component.sass'],
+  styleUrls: ['./blog-aside.component.scss'],
 })
 export class BlogAsideComponent implements OnInit {
   blogs: Observable<BlogItem[]>;

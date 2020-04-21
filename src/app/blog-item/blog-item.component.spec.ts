@@ -8,9 +8,8 @@ describe('BlogItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BlogItemComponent ]
-    })
-    .compileComponents();
+      declarations: [BlogItemComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -18,9 +17,10 @@ describe('BlogItemComponent', () => {
     component = fixture.componentInstance;
 
     component.blogItem = {
+      id: 'i23',
       title: 'mockBlogItem',
       category: 'mockCategory',
-      content: [{text: 'mockText'}]
+      content: [{ type: 'p', value: 'mock text' }],
     };
 
     fixture.detectChanges();
