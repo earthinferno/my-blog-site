@@ -1,0 +1,19 @@
+:host {
+  display: none;
+
+  @media only screen and (min-width: 600px) {
+    display: initial;
+    flex-grow: 1;
+    padding-left: 16px;
+    margin: 20px 0px 0px 12px;
+    background: white;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  ul {
+    padding: initial;
+  }
+}
