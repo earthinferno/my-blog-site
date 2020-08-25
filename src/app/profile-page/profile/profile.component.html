@@ -1,0 +1,32 @@
+<div>
+  <!-- <img src="../assets/safety-robot.jpg" alt="image" /> -->
+
+  <div class="avitar-card">
+    <img class="avitar" src="../assets/profile/profile_image.jpg" alt="image" />
+
+    <div class="avitar-main">
+      <div>
+        <h1>Graham Small</h1>
+        <div>Nottingham, UK</div>
+        <div><a [routerLink]="['/contact']">Contact Me</a></div>
+        <p></p>
+      </div>
+
+      <div class="row">
+        <span class="encircle">
+          <!-- <div class="arrow"></div> -->
+          <div [ngClass]="[arrowStyle]" (click)="expand()"></div>
+        </span>
+        <span> Details</span>
+      </div>
+
+      <div [ngClass]="[hiddenContentStyle]">
+        <div>Here is some content</div>
+        <div>Here is some content</div>
+        <div>Here is some content</div>
+        <div>Here is some content</div>
+        <div>Here is some content</div>
+      </div>
+    </div>
+  </div>
+</div>

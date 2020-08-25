@@ -3,10 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { BlogEntryDecoratorComponent } from './blog-entry-decorator/blog-entry-decorator.component';
 import { BlogsMainComponent } from './blog-main/blogs-main.component';
-import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile-page/profile/profile.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: ProfileComponent },
   { path: 'blogs', component: BlogsMainComponent },
   { path: 'blogs/:blogId', component: BlogEntryDecoratorComponent },
 ];

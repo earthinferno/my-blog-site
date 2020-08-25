@@ -12,9 +12,10 @@ import { BlogsMainComponent } from './blog-main/blogs-main.component';
 import { BlogSnippetComponent } from './blog-snippet/blog-snippet.component';
 import { BlogsContainerComponent } from './blogs-section/blogs-section.component';
 import { HomeComponent } from './home/home.component';
+import { JoinStringsPipe } from './join-strings.pipe';
+import { ProfilePageModule } from './profile-page/profile-page.module';
 import { SafeHtmlPipe } from './sanitize-html.pipe';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { JoinStringsPipe } from './join-strings.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,12 @@ import { JoinStringsPipe } from './join-strings.pipe';
     SafeHtmlPipe,
     JoinStringsPipe,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ProfilePageModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
   exports: [SafeHtmlPipe, JoinStringsPipe],
