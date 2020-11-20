@@ -1,0 +1,38 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: "Blogs-App Cloud Services\n"
+Globals:
+  Function:
+    Timeout: 3
+Resources:
+  GetBlogsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: s3://my-blogs-site-code-sam/eddb15c579c31ecd5b1f7c726527e179
+      Handler: app.lambdaHandler
+      Runtime: nodejs12.x
+      Description: Returns a list of blogs
+      MemorySize: 128
+      Events:
+        GetBlogs:
+          Type: Api
+          Properties:
+            Path: /blogs
+            Method: get
+Outputs:
+  GetBlogsApi:
+    Description: API Gateway endpoint URL for for GetBlogs function
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/hello/
+  GetBlogsFunction:
+    Description: GetBlogs Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+      - GetBlogsFunction
+      - Arn
+  GetBlogsFunctionIamRole:
+    Description: Implicit IAM Role created for GetBlogs function
+    Value:
+      Fn::GetAtt:
+      - GetBlogsFunctionRole
+      - Arn
